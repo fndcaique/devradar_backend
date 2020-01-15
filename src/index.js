@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
+require('dotenv/config');
 
 const app = express();
-
-mongoose.connect('mongodb+srv://fndcaique:*ElaineKita*@cluster0-aywhl.mongodb.net/week10?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://fndcaique:${process.env.MONGODB_PASSWORD}@cluster0-aywhl.mongodb.net/week10?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
