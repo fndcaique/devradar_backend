@@ -7,7 +7,7 @@ const app = express();
 mongoose.connect('mongodb+srv://fndcaique:*ElaineKita*@cluster0-aywhl.mongodb.net/week10?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  // useCreateIndex: true
+  useCreateIndex: true
 });
 
 app.use(express.json()); // app recebe requisições com o corpo json
